@@ -2,5 +2,6 @@ easyocr==1.7.1
 pillow==10.2.0
 numpy==1.24.3
 requests==2.31.0
-tensorflow-cpu==2.15.0  # Opcional, si agregas detección de marca/tipo
 opencv-python-headless==4.8.1.78
+# Removemos tensorflow-cpu ya que por ahora no lo estamos usando
+# Si lo necesitas más adelante, usaremos una versión compatible
