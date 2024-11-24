@@ -1,8 +1,12 @@
 [build]
-  publish = "public"
-  functions = "netlify/functions"
+command = "pip install -r requirements.txt -t runtime/python && cp -r runtime/python/* netlify/functions/detect_vehicle/"
+functions = "netlify/functions"
+
+[functions]
+directory = "netlify/functions"
+node_bundler = "esbuild"
 
 [[redirects]]
-  from = "/api/*"
-  to = "/.netlify/functions/:splat"
-  status = 200
+from = "/api/*"
+to = "/.netlify/functions/:splat"
+status = 200
