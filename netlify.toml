@@ -1,6 +1,13 @@
 [build]
-command = "pip install -r requirements.txt -t runtime/python && cp -r runtime/python/* netlify/functions/detect_vehicle/"
+command = """
+python3.8 -m pip install --upgrade pip &&
+python3.8 -m pip install -r requirements.txt -t runtime/python &&
+cp -r runtime/python/* netlify/functions/detect_vehicle/
+"""
 functions = "netlify/functions"
+
+[build.environment]
+PYTHON_VERSION = "3.8"
 
 [functions]
 directory = "netlify/functions"
