@@ -1,0 +1,6 @@
+easyocr
+torch
+Pillow
+requests
+transformers
+numpy
