@@ -1,19 +1,9 @@
 [build]
-  command = """
-    python -m pip install --upgrade pip &&
-    pip install -r requirements.txt
-  """
-  functions = "netlify/functions"
   publish = "public"
-
-[functions]
-  directory = "netlify/functions"
-  node_bundler = "esbuild"
+  functions = "netlify/functions"
 
 [build.environment]
   PYTHON_VERSION = "3.8"
-  POETRY_VERSION = "1.4.2"
-  POETRY_VIRTUALENVS_CREATE = "false"
 
 [[redirects]]
   from = "/api/*"
